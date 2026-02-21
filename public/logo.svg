@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1525;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#020509;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0052FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00AAFF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="coreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0033CC;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="96" fill="url(#bgGrad)" stroke="#0e2040" stroke-width="1.5"/>
+
+  <!-- Outer glow ring -->
+  <circle cx="100" cy="100" r="78" fill="none" stroke="#0052FF" stroke-width="1" opacity="0.2"/>
+  <circle cx="100" cy="100" r="72" fill="none" stroke="#0052FF" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Hexagon outer ring -->
+  <polygon
+    points="100,28 158,62 158,130 100,164 42,130 42,62"
+    fill="none"
+    stroke="url(#ringGrad)"
+    stroke-width="2.5"
+    filter="url(#glow)"
+    opacity="0.9"
+  />
+
+  <!-- Hexagon inner -->
+  <polygon
+    points="100,44 146,70 146,122 100,148 54,122 54,70"
+    fill="url(#bgGrad)"
+    stroke="#0052FF"
+    stroke-width="1"
+    opacity="0.5"
+  />
+
+  <!-- Corner accent dots on hexagon vertices -->
+  <circle cx="100" cy="28" r="3" fill="#0052FF" filter="url(#glow)" opacity="0.9"/>
+  <circle cx="158" cy="62" r="3" fill="#0052FF" filter="url(#glow)" opacity="0.9"/>
+  <circle cx="158" cy="130" r="3" fill="#0052FF" filter="url(#glow)" opacity="0.9"/>
+  <circle cx="100" cy="164" r="3" fill="#0052FF" filter="url(#glow)" opacity="0.9"/>
+  <circle cx="42" cy="130" r="3" fill="#0052FF" filter="url(#glow)" opacity="0.9"/>
+  <circle cx="42" cy="62" r="3" fill="#0052FF" filter="url(#glow)" opacity="0.9"/>
+
+  <!-- Core diamond / octagon shape -->
+  <polygon
+    points="100,58 126,76 134,100 126,124 100,142 74,124 66,100 74,76"
+    fill="url(#coreGrad)"
+    opacity="0.15"
+  />
+
+  <!-- Center cross lines -->
+  <line x1="100" y1="62" x2="100" y2="138" stroke="#0052FF" stroke-width="1" opacity="0.3"/>
+  <line x1="62" y1="100" x2="138" y2="100" stroke="#0052FF" stroke-width="1" opacity="0.3"/>
+  <line x1="72" y1="72" x2="128" y2="128" stroke="#0052FF" stroke-width="0.8" opacity="0.15"/>
+  <line x1="128" y1="72" x2="72" y2="128" stroke="#0052FF" stroke-width="0.8" opacity="0.15"/>
+
+  <!-- Central ◈ symbol - the mark -->
+  <!-- Outer rotated square -->
+  <rect x="78" y="78" width="44" height="44" rx="3"
+    transform="rotate(45 100 100)"
+    fill="url(#coreGrad)"
+    stroke="url(#ringGrad)"
+    stroke-width="2"
+    filter="url(#softglow)"
+  />
+
+  <!-- Inner square -->
+  <rect x="86" y="86" width="28" height="28" rx="2"
+    transform="rotate(45 100 100)"
+    fill="#0052FF"
+    opacity="0.6"
+  />
+
+  <!-- Center dot -->
+  <circle cx="100" cy="100" r="7" fill="white" filter="url(#glow)" opacity="0.95"/>
+  <circle cx="100" cy="100" r="4" fill="#0052FF"/>
+  <circle cx="100" cy="100" r="1.5" fill="white" opacity="0.9"/>
+
+  <!-- Tick marks around center -->
+  <line x1="100" y1="68" x2="100" y2="74" stroke="#0052FF" stroke-width="2" opacity="0.6"/>
+  <line x1="100" y1="126" x2="100" y2="132" stroke="#0052FF" stroke-width="2" opacity="0.6"/>
+  <line x1="68" y1="100" x2="74" y2="100" stroke="#0052FF" stroke-width="2" opacity="0.6"/>
+  <line x1="126" y1="100" x2="132" y2="100" stroke="#0052FF" stroke-width="2" opacity="0.6"/>
+
+  <!-- Outer arc segments (data feel) -->
+  <path d="M 100 18 A 82 82 0 0 1 169 59" fill="none" stroke="#0052FF" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <path d="M 169 141 A 82 82 0 0 1 100 182" fill="none" stroke="#0052FF" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <path d="M 31 141 A 82 82 0 0 1 31 59" fill="none" stroke="#0052FF" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+</svg>

@@ -1,0 +1,239 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" width="1500" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#020509"/>
+      <stop offset="50%" style="stop-color:#060d1a"/>
+      <stop offset="100%" style="stop-color:#020509"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0052FF"/>
+      <stop offset="100%" style="stop-color:#00AAFF"/>
+    </linearGradient>
+    <linearGradient id="glowLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0052FF;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#0052FF;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="glowRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0052FF;stop-opacity:0"/>
+      <stop offset="100%" style="stop-color:#00AAFF;stop-opacity:0.15"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="bigglow">
+      <feGaussianBlur stdDeviation="20" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="10" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="clip">
+      <rect width="1500" height="500"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#clip)">
+    <!-- Base background -->
+    <rect width="1500" height="500" fill="url(#bg)"/>
+
+    <!-- Glow blobs -->
+    <ellipse cx="200" cy="250" rx="400" ry="300" fill="#0052FF" opacity="0.06" filter="url(#bigglow)"/>
+    <ellipse cx="1350" cy="250" rx="300" ry="250" fill="#00AAFF" opacity="0.04" filter="url(#bigglow)"/>
+    <ellipse cx="750" cy="500" rx="500" ry="200" fill="#0052FF" opacity="0.05" filter="url(#bigglow)"/>
+
+    <!-- Grid pattern -->
+    <g opacity="0.04" stroke="#0052FF" stroke-width="1">
+      <!-- Vertical lines -->
+      <line x1="0" y1="0" x2="0" y2="500"/>
+      <line x1="60" y1="0" x2="60" y2="500"/>
+      <line x1="120" y1="0" x2="120" y2="500"/>
+      <line x1="180" y1="0" x2="180" y2="500"/>
+      <line x1="240" y1="0" x2="240" y2="500"/>
+      <line x1="300" y1="0" x2="300" y2="500"/>
+      <line x1="360" y1="0" x2="360" y2="500"/>
+      <line x1="420" y1="0" x2="420" y2="500"/>
+      <line x1="480" y1="0" x2="480" y2="500"/>
+      <line x1="540" y1="0" x2="540" y2="500"/>
+      <line x1="600" y1="0" x2="600" y2="500"/>
+      <line x1="660" y1="0" x2="660" y2="500"/>
+      <line x1="720" y1="0" x2="720" y2="500"/>
+      <line x1="780" y1="0" x2="780" y2="500"/>
+      <line x1="840" y1="0" x2="840" y2="500"/>
+      <line x1="900" y1="0" x2="900" y2="500"/>
+      <line x1="960" y1="0" x2="960" y2="500"/>
+      <line x1="1020" y1="0" x2="1020" y2="500"/>
+      <line x1="1080" y1="0" x2="1080" y2="500"/>
+      <line x1="1140" y1="0" x2="1140" y2="500"/>
+      <line x1="1200" y1="0" x2="1200" y2="500"/>
+      <line x1="1260" y1="0" x2="1260" y2="500"/>
+      <line x1="1320" y1="0" x2="1320" y2="500"/>
+      <line x1="1380" y1="0" x2="1380" y2="500"/>
+      <line x1="1440" y1="0" x2="1440" y2="500"/>
+      <line x1="1500" y1="0" x2="1500" y2="500"/>
+      <!-- Horizontal lines -->
+      <line x1="0" y1="60" x2="1500" y2="60"/>
+      <line x1="0" y1="120" x2="1500" y2="120"/>
+      <line x1="0" y1="180" x2="1500" y2="180"/>
+      <line x1="0" y1="240" x2="1500" y2="240"/>
+      <line x1="0" y1="300" x2="1500" y2="300"/>
+      <line x1="0" y1="360" x2="1500" y2="360"/>
+      <line x1="0" y1="420" x2="1500" y2="420"/>
+      <line x1="0" y1="480" x2="1500" y2="480"/>
+    </g>
+
+    <!-- Left glow strip -->
+    <rect x="0" y="0" width="600" height="500" fill="url(#glowLeft)"/>
+    <!-- Right glow strip -->
+    <rect x="900" y="0" width="600" height="500" fill="url(#glowRight)"/>
+
+    <!-- Decorative hexagon left background -->
+    <polygon points="120,160 195,117 270,160 270,246 195,289 120,246"
+      fill="none" stroke="#0052FF" stroke-width="1.5" opacity="0.2"/>
+    <polygon points="150,178 195,153 240,178 240,228 195,253 150,228"
+      fill="none" stroke="#0052FF" stroke-width="1" opacity="0.12"/>
+
+    <!-- Decorative hexagon right background -->
+    <polygon points="1300,200 1360,165 1420,200 1420,270 1360,305 1300,270"
+      fill="none" stroke="#0052FF" stroke-width="1.5" opacity="0.15"/>
+    <polygon points="1320,215 1360,192 1400,215 1400,260 1360,283 1320,260"
+      fill="none" stroke="#0052FF" stroke-width="0.8" opacity="0.1"/>
+
+    <!-- Horizontal accent lines -->
+    <line x1="0" y1="2" x2="1500" y2="2" stroke="#0052FF" stroke-width="2" opacity="0.6"/>
+    <line x1="0" y1="498" x2="1500" y2="498" stroke="#0052FF" stroke-width="2" opacity="0.6"/>
+
+    <!-- Left corner accent -->
+    <line x1="0" y1="2" x2="80" y2="2" stroke="#0052FF" stroke-width="3" opacity="1" filter="url(#glow)"/>
+    <line x1="0" y1="498" x2="80" y2="498" stroke="#0052FF" stroke-width="3" opacity="1" filter="url(#glow)"/>
+    <!-- Right corner accent -->
+    <line x1="1420" y1="2" x2="1500" y2="2" stroke="#0052FF" stroke-width="3" opacity="1" filter="url(#glow)"/>
+    <line x1="1420" y1="498" x2="1500" y2="498" stroke="#0052FF" stroke-width="3" opacity="1" filter="url(#glow)"/>
+
+    <!-- ═══ LOGO MARK (left area) ═══ -->
+    <g transform="translate(180, 250)">
+      <!-- Outer hex -->
+      <polygon points="0,-90 78,-45 78,45 0,90 -78,45 -78,-45"
+        fill="none" stroke="url(#blueGrad)" stroke-width="2.5" filter="url(#glow)" opacity="0.9"/>
+      <!-- Inner hex -->
+      <polygon points="0,-66 57,-33 57,33 0,66 -57,33 -57,-33"
+        fill="#070e1a" stroke="#0052FF" stroke-width="1" opacity="0.5"/>
+      <!-- Cross lines -->
+      <line x1="0" y1="-50" x2="0" y2="50" stroke="#0052FF" stroke-width="1" opacity="0.25"/>
+      <line x1="-50" y1="0" x2="50" y2="0" stroke="#0052FF" stroke-width="1" opacity="0.25"/>
+      <!-- Core rotated square -->
+      <rect x="-26" y="-26" width="52" height="52" rx="3"
+        transform="rotate(45)"
+        fill="#0052FF" stroke="url(#blueGrad)" stroke-width="2"
+        opacity="0.9" filter="url(#softglow)"/>
+      <rect x="-16" y="-16" width="32" height="32" rx="2"
+        transform="rotate(45)"
+        fill="#0033AA" opacity="0.7"/>
+      <!-- Center -->
+      <circle cx="0" cy="0" r="8" fill="white" opacity="0.95" filter="url(#glow)"/>
+      <circle cx="0" cy="0" r="4.5" fill="#0052FF"/>
+      <circle cx="0" cy="0" r="1.8" fill="white" opacity="0.9"/>
+      <!-- Vertex dots -->
+      <circle cx="0" cy="-90" r="3.5" fill="#0052FF" filter="url(#glow)"/>
+      <circle cx="78" cy="-45" r="3.5" fill="#0052FF" filter="url(#glow)"/>
+      <circle cx="78" cy="45" r="3.5" fill="#0052FF" filter="url(#glow)"/>
+      <circle cx="0" cy="90" r="3.5" fill="#0052FF" filter="url(#glow)"/>
+      <circle cx="-78" cy="45" r="3.5" fill="#0052FF" filter="url(#glow)"/>
+      <circle cx="-78" cy="-45" r="3.5" fill="#0052FF" filter="url(#glow)"/>
+    </g>
+
+    <!-- ═══ MAIN TEXT ═══ -->
+    <!-- "Base" -->
+    <text x="320" y="220"
+      font-family="'Arial Black', 'Arial', sans-serif"
+      font-size="108" font-weight="900"
+      fill="#0052FF"
+      letter-spacing="-4"
+      filter="url(#glow)"
+    >Base</text>
+
+    <!-- "Agent" -->
+    <text x="320" y="330"
+      font-family="'Arial Black', 'Arial', sans-serif"
+      font-size="108" font-weight="900"
+      fill="#eef4ff"
+      letter-spacing="-4"
+    >Agent</text>
+
+    <!-- ═══ RIGHT CONTENT ═══ -->
+    <!-- Tagline -->
+    <text x="960" y="195"
+      font-family="'Courier New', monospace"
+      font-size="15" font-weight="700"
+      fill="#0052FF" letter-spacing="4"
+      text-anchor="start"
+      opacity="0.9"
+    >// YOUR ONCHAIN AI ANALYST</text>
+
+    <!-- Separator line -->
+    <line x1="960" y1="215" x2="1440" y2="215" stroke="#0e2040" stroke-width="1"/>
+
+    <!-- Description -->
+    <text x="960" y="258"
+      font-family="'Courier New', monospace"
+      font-size="18" fill="#3d5575"
+      letter-spacing="0.5"
+    >Analyze tokens, wallets &amp; DeFi protocols</text>
+    <text x="960" y="286"
+      font-family="'Courier New', monospace"
+      font-size="18" fill="#3d5575"
+      letter-spacing="0.5"
+    >on the Base ecosystem with AI precision.</text>
+
+    <!-- Stat pills -->
+    <g transform="translate(960, 320)">
+      <!-- Pill 1 -->
+      <rect x="0" y="0" width="148" height="36" rx="18"
+        fill="#0052FF" opacity="0.12" stroke="#0052FF" stroke-width="1" opacity="0.3"/>
+      <text x="74" y="23"
+        font-family="'Courier New', monospace" font-size="13" font-weight="700"
+        fill="#5588ff" text-anchor="middle" letter-spacing="1"
+      >◈ Built on Base</text>
+
+      <!-- Pill 2 -->
+      <rect x="160" y="0" width="170" height="36" rx="18"
+        fill="#0052FF" opacity="0.08" stroke="#0e2040" stroke-width="1"/>
+      <text x="245" y="23"
+        font-family="'Courier New', monospace" font-size="13"
+        fill="#3d5575" text-anchor="middle" letter-spacing="1"
+      >10 free msg/day</text>
+
+      <!-- Pill 3 -->
+      <rect x="342" y="0" width="168" height="36" rx="18"
+        fill="#0052FF" opacity="0.08" stroke="#0e2040" stroke-width="1"/>
+      <text x="426" y="23"
+        font-family="'Courier New', monospace" font-size="13"
+        fill="#3d5575" text-anchor="middle" letter-spacing="1"
+      >No registration</text>
+    </g>
+
+    <!-- URL / CTA -->
+    <text x="960" y="430"
+      font-family="'Courier New', monospace"
+      font-size="16" fill="#0052FF"
+      letter-spacing="2" opacity="0.7"
+    >baseagent.xyz</text>
+
+    <!-- Bottom right decorative data lines -->
+    <g opacity="0.35" font-family="'Courier New', monospace" font-size="11" fill="#0e2040">
+      <text x="1300" y="448">chain_id: 8453</text>
+      <text x="1300" y="466">network: base-mainnet</text>
+    </g>
+
+    <!-- Corner marks -->
+    <line x1="0" y1="30" x2="0" y2="0" stroke="#0052FF" stroke-width="3" opacity="0.8"/>
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#0052FF" stroke-width="3" opacity="0.8"/>
+    <line x1="1500" y1="30" x2="1500" y2="0" stroke="#0052FF" stroke-width="3" opacity="0.8"/>
+    <line x1="1470" y1="0" x2="1500" y2="0" stroke="#0052FF" stroke-width="3" opacity="0.8"/>
+    <line x1="0" y1="470" x2="0" y2="500" stroke="#0052FF" stroke-width="3" opacity="0.8"/>
+    <line x1="0" y1="500" x2="30" y2="500" stroke="#0052FF" stroke-width="3" opacity="0.8"/>
+    <line x1="1500" y1="470" x2="1500" y2="500" stroke="#0052FF" stroke-width="3" opacity="0.8"/>
+    <line x1="1470" y1="500" x2="1500" y2="500" stroke="#0052FF" stroke-width="3" opacity="0.8"/>
+  </g>
+</svg>
