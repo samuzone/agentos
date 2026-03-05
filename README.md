@@ -74,4 +74,5 @@ agentosbase/
 - **Daily limit**: `NEXT_PUBLIC_DAILY_LIMIT` in `.env.local`
 - **Agent personality**: `SYSTEM_PROMPT` in `app/api/chat/route.ts`
 - **Suggestions**: `SUGGESTIONS` array in `components/AgentChat.tsx`
-- **Colors**: CSS variables in `app/globals.css`
+- **Colors**: CSS variables in `app/globals.css` 
+!
