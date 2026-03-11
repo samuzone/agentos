@@ -11,7 +11,7 @@ npm install
 
 ### 2. Configure your API key
 ```bash
-cp .env.local.example .env.local
+cp .env.local.example .env.locall
 ```
 Open `.env.local` and paste your Anthropic API key:
 ```
